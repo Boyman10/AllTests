@@ -13,7 +13,7 @@
 	<AppenderRef ref="Console" />
 	<AppenderRef ref="MyFile"/>
 	</Root>
-  	<logger name="com" level="TRACE">
+  	<logger name="com" level="TRACE" additivity="false">
   		<AppenderRef ref="Console"/>
   	</logger>
 </Loggers>
