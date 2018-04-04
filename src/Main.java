@@ -1,6 +1,8 @@
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import Tools.MyTools;
+
 //http://logging.apache.org/log4j/2.x/download.html
 //https://joeldauncey.wordpress.com/2015/07/29/log4j2-basic-logging-for-java-development-eclipse/
 
@@ -36,7 +38,7 @@ public class Main {
 
 		System.out.println("Testing log4j2");
 		
-		logger.trace("msg de trace"); // E/S methods
+	/*	logger.trace("msg de trace"); // E/S methods
 		logger.debug("msg de debogage"); // Display values of datas
 		logger.info("msg d'information"); //loading of conf file, beg/end long process
 		logger.warn("msg d'avertissement"); // error login, invalid data
@@ -52,6 +54,11 @@ public class Main {
 		logger1.fatal("msg d'erreur fatale");  // error DB, exceptions which stop the program	}
 
 		logger.trace("Configuration File Defined To Be :: "+System.getProperty("log4j2.xml"));
+		*/
+		
+		MyTools mTools = new MyTools();
+		mTools.generateArray(4, 6);
+		
 		
 	}
 }
