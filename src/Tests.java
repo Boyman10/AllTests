@@ -11,7 +11,7 @@ public class Tests {
 	public static void main(String[] args) {
 		
 		MyTools mTools = new MyTools();
-		mTools.generateArray(6, 4);
+		mTools.generateArrayBase(6, 4);
 		
 	}
 	

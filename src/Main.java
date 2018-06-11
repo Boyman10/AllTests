@@ -1,3 +1,6 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -56,8 +59,35 @@ public class Main {
 		logger.trace("Configuration File Defined To Be :: "+System.getProperty("log4j2.xml"));
 		*/
 		
-		MyTools mTools = new MyTools();
-		mTools.generateArray(4, 6);
+		//MyTools mTools = new MyTools();
+		//mTools.generateArray(4, 6);
+		
+		boolean valid = false;
+		Scanner sc = new Scanner(System.in);
+		
+		byte[] numArr = new byte[4];
+		
+		int i = 0;
+		do {
+			System.out.println("enter a number");
+			
+			try {
+				
+				numArr[i++] = sc.nextByte();
+				if (i == 4)
+					valid = true;
+				
+			} catch (InputMismatchException e) {
+				sc.next();
+				i--;
+				System.err.println("Wrong type number - type again please !");
+
+			}
+			
+			
+		} while (!valid);
+		
+		System.out.println("ok done with array " + numArr[0]);
 		
 		
 	}
